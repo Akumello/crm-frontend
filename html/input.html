@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Bid Data Input</title>
-</head>
-<body>
-<section class="m-auto">
-  <input type="text" placeholder="Office" class="input input-bordered w-full" />
-</section>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bid Data Input</title>
+  </head>
+  <body>
+    <section class="m-auto">
+      <div class="w-fit m-20 border px-4 py-2 rounded-lg">
+        <h2 class="text-lg font-bold mb-3">Bid Information</h2>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Bid Name:</div>
+          <input type="text" id="input-bid-name" placeholder="Bid Name" class="input input-bordered w-full border px-1" />
+        </div>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Department:</div>
+          <input type="text" id="input-department" placeholder="Department" class="input input-bordered w-full border px-1" />
+        </div>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Agency:</div>
+          <input type="text" id="input-agency" placeholder="Agency" class="input input-bordered w-full border" />
+        </div>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Office:</div>
+          <input type="text" id="input-office" placeholder="Office" class="input input-bordered w-full border" />
+        </div>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Name:</div>
+          <input type="text" id="input-name" placeholder="Name" class="input input-bordered w-full border" />
+        </div>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Phone:</div>
+          <input type="text" id="input-phone" placeholder="Phone" class="input input-bordered w-full border" />
+        </div>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Email:</div>
+          <input type="text" id="input-email" placeholder="Email" class="input input-bordered w-full border" />
+        </div>
+        <div class="flex flex-row gap-4 mb-2">
+          <div class="text-md w-36">Title:</div>
+          <input type="text" id="input-title" placeholder="Title" class="input input-bordered w-full border" />
+        </div>
+        <div class="flex flex-row mb-2">
+          <div class="text-md w-32">File Upload:</div>
+          <input type="file" class="p-0"/>
+        </div>
+        <div class="flex flex-row mb-4">
+          <div class="text-md w-32">File Upload:</div>
+          <input type="file" />
+        </div>
+        <div class="flex flex-row gap-4">
+          <div class="grow"></div>
+          <button id="btn-save" class="border rounded-xl px-2 transition-colors hover:bg-blue-100 active:bg-transparent">Save</button>
+          <button class="border rounded-xl px-2 transition-colors hover:bg-blue-100 active:bg-transparent">Cancel</button>
+        </div>
+      </div>
+
+    </section>
+
+    <script src="../js/input.js"></script>
+  </body>
 </html>
