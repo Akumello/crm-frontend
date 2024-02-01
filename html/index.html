@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <title>Document</title>
 </head>
-<body class="m-16">
+<body class="m-4">
   <!-- Bid Information Profile Section -->
   <div class=" font-bold bg-blue-200 text-center p-4">Bid Name</div>
   <section class="border rounded shadow-lg p-4 mb-4">
@@ -22,22 +22,31 @@
       </div>
       <!-- Contact Profile Section -->
       <div class="grow border rounded-xl px-2 pt-1 h-24 overflow-auto hover:overflow-scroll">
-        <input type="text" placeholder="Name" class="input input-bordered w-full mb-2" />
-        <input type="text" placeholder="Phone" class="input input-bordered w-full mb-2" />
-        <input type="text" placeholder="Email" class="input input-bordered w-full mb-2" />
-        <input type="text" placeholder="Title" class="input input-bordered w-full mb-2" />
-        <button class="border-2 border-spacing-1 mb-2">Add</button>
+        <table id="table-contacts">
+          <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Email</th>
+            <th>Phone</th>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="John" class="input input-bordered w-24" /></td>
+            <td><input type="text" placeholder="PM" class="input input-bordered w-32" /></td>
+            <td><input type="text" placeholder="jsmith@email.com" class="input input-bordered w-36" /></td>
+            <td><input type="text" placeholder="(555) 555-5555" class="input input-bordered w-32" /></td>
+          </tr>
+        </table>
+        <button id="btn-add-contact" class="border w-full">+</button>
       </div>
       <!-- Important Dates -->
       <div class="grow border rounded-xl px-2 pt-1">
-        <input type="text" placeholder="Proposal Submission Date" class="input input-bordered w-full mb-2" />
+        <input type="text" placeholder="Submission Date" class="input input-bordered w-full mb-2" />
         <input type="text" placeholder="Questions Due Date" class="input input-bordered w-full mb-2" />
-        <input type="text" placeholder="Additional Data" class="input input-bordered w-full mb-2" />
       </div>
 
       <!-- Current Status Dropdown -->
       <div class="grow-0 border rounded-xl px-2 pt-1 w-fit">
-        <label class="block mb-2">Current Status</label>
+        <label class="text-center block mb-2">Current Status</label>
         <select class="select select-bordered w-52" id="statusDropdown">
           <option>Yes</option>
           <option>Pending Questions</option>
@@ -50,7 +59,7 @@
   </section>
 
   <!-- Flex Columns -->
-  <div class="flex flex-col md:flex-row gap-4 h-96">
+  <div class="flex flex-col md:flex-row gap-4 h-screen">
     <!-- NLP Summarization Window -->
     <div class="grow border rounded shadow-lg p-4">
       <div class="font-bold mb-4">NLP Summarization</div>
@@ -59,12 +68,8 @@
 
     <!-- Doc Viewer Window -->
     <div class="grow border rounded shadow-lg p-4">
-      <div class="font-bold mb-4">Doc Viewer</div>
-      <!-- Placeholder for Document Viewer -->
-      <!-- <div class="border-2 border-dashed rounded h-64 flex justify-center items-center">
-        <span>Document Viewer Placeholder</span>
-      </div> -->
-      <object class="w-full h-80" data="../pdf/sample.pdf" type="application/pdf"></object>
+      <!-- <div class="font-bold mb-4">Doc Viewer</div> -->
+      <object class="w-full h-full" data="../pdf/sample.pdf" type="application/pdf"></object>
     </div>
 
     <!-- Doc Viewer & Status/Notes Column -->
@@ -76,9 +81,9 @@
       </div>
 
       <!-- Notes Autopopulated Window -->
-      <div class="border rounded shadow-lg p-4 flex-grow overflow-auto">
+      <div class="border rounded shadow-lg p-4 overflow-auto">
         <div class="font-bold mb-4">Notes Autopopulated</div>
-        <!-- Autopopulated notes will be inserted here -->
+        <div>No Notes</div>
       </div>
     </div>
   </div>

@@ -1,4 +1,6 @@
 const statusDropdown = document.querySelector('#statusDropdown');
+const btnAddContact = document.querySelector('#btn-add-contact');
+const tableContacts = document.querySelector('#table-contacts');
 
 statusDropdown.addEventListener('change', e => {
   const status = e.target.value;
@@ -23,8 +25,12 @@ statusDropdown.addEventListener('change', e => {
     default:
       break;
   }
+});
 
-  console.log(status);
+btnAddContact.addEventListener('click', e => {
+  // Append input html td data to table's innerHTML
+  const newRow = '<tr><td><input type="text" placeholder="John" class="input input-bordered w-24" /></td><td><input type="text" placeholder="PM" class="input input-bordered w-32" /></td><td><input type="text" placeholder="jsmith@email.com" class="input input-bordered w-36" /></td><td><input type="text" placeholder="(555) 555-5555" class="input input-bordered w-32" /></td></tr>';
+  tableContacts.innerHTML += newRow;
 });
 
 // CHATGPT
