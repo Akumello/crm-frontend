@@ -8,20 +8,26 @@
 </head>
 <body class="m-4">
   <!-- Bid Information Profile Section -->
-  <div class=" font-bold bg-blue-200 text-center p-4">Bid Name</div>
-  <section class="border rounded shadow-lg p-4 mb-4">
-    <div class="flex flex-row space-x-48">
-      <div class="font-bold mb-4">Bid Information Profile</div>
+  <div class=" font-bold bg-blue-100 p-4">Bid Information Profile</div>
+  <section class="border rounded shadow-lg p-4 mb-4 h-64">
+    <!-- Bid Header -->
+    <div class="flex flex-row space-x-48 mb-1">
+      <p class="grow font-bold pt-5">Bid Name</p>
+      <div class="">
+        <p class="text-right">Submission Date:</p>
+        <p class="text-right">Questions Due:</p>
+      </div>
     </div>
-    <div class="flex flex-col md:flex-row gap-4">
+
+    <div class="flex flex-col md:flex-row gap-4 h-4/6">
       <!-- Department, Agency, Office -->
       <div class="grow border rounded-xl px-2 pt-1">
-        <input type="text" placeholder="Department" class="input input-bordered w-full mb-2" />
-        <input type="text" placeholder="Agency" class="input input-bordered w-full mb-2" />
-        <input type="text" placeholder="Office" class="input input-bordered w-full" />
+        <p class="mb-2">Department</p>
+        <p class="mb-2">&emsp;Agency</p>
+        <p class="mb-2">Office</p>
       </div>
       <!-- Contact Profile Section -->
-      <div class="grow border rounded-xl px-2 pt-1 h-24 overflow-auto hover:overflow-scroll">
+      <div class="grow border rounded-xl px-2 pt-1 overflow-auto hover:overflow-scroll">
         <table id="table-contacts">
           <tr>
             <th>Name</th>
@@ -38,16 +44,11 @@
         </table>
         <button id="btn-add-contact" class="border w-full">+</button>
       </div>
-      <!-- Important Dates -->
-      <div class="grow border rounded-xl px-2 pt-1">
-        <input type="text" placeholder="Submission Date" class="input input-bordered w-full mb-2" />
-        <input type="text" placeholder="Questions Due Date" class="input input-bordered w-full mb-2" />
-      </div>
 
       <!-- Current Status Dropdown -->
       <div class="grow-0 border rounded-xl px-2 pt-1 w-fit">
         <label class="text-center block mb-2">Current Status</label>
-        <select class="select select-bordered w-52" id="statusDropdown">
+        <select class="select border rounded-md w-56" id="statusDropdown">
           <option>Yes</option>
           <option>Pending Questions</option>
           <option>Pending Additional Review</option>
